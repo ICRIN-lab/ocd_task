@@ -1,0 +1,105 @@
+id_candidate, no_image, no_trial, question, result, ans_candidate, good_ans, reaction_time, time_stamp
+leila, 1, 0, Combien y a-t-il de personnes sur cette photo ?  9 / 15, 1, a, a, 3.52, 21.87
+leila, 1, 0, Combien y a-t-il de cafetières sur la photo ?  7 / 2, 0, a, p, 1.84, 23.73
+leila, 1, 1, Retry, 0, p, 0, 7.49, 31.24
+leila, 1, 1, Combien y a-t-il de personnes sur cette photo ?  9 / 15, 1, a, a, 2.13, 36.77
+leila, 1, 1, Combien y a-t-il de cafetières sur la photo ?  7 / 2, 0, a, p, 1.42, 38.2
+leila, 1, 1, Retry, 0, a, 0, 2.51, 40.79
+leila, 2, 1, Combien y a-t-il de personnes sur cette photo ?  4 / 8, 1, a, a, 1.74, 45.18
+leila, 2, 1, Retry, 0, a, 0, 3.04, 48.29
+leila, 3, 1, Combien y a-t-il de personnes assises sur cette photo ?  2 / 4, 0, p, a, 2.4, 57.33
+leila, 3, 1, Combien y a-t-il de personnes cette photo ?  12 / 22, 0, p, a, 1.96, 59.3
+leila, 3, 1, Avez-vous vu une personne habillé d'une robe blanche ?, 1, a, a, 9.5, 68.82
+leila, 3, 1, Retry, 0, a, 0, 3.69, 72.61
+leila, 4, 1, Combien y a-t-il de personnes sur cette photo ?  4 / 3, 1, p, p, 3.24, 79.41
+leila, 4, 1, Avez-vous vu une corde à sauter ?, 1, a, a, 2.41, 81.83
+leila, 4, 2, Retry, 0, p, 0, 1.9, 83.78
+leila, 4, 2, Combien y a-t-il de personnes sur cette photo ?  4 / 3, 0, a, p, 0.93, 88.25
+leila, 4, 2, Avez-vous vu une corde à sauter ?, 1, a, a, 5.99, 94.26
+leila, 4, 2, Retry, 0, a, 0, 1.07, 95.36
+leila, 5, 2, Combien y a-t-il de personnes sur cette photo ?  4 / 3, 1, a, a, 1.63, 99.52
+leila, 5, 2, Avez-vous vu une balle sur cette photo ?, 1, a, a, 1.9, 101.44
+leila, 5, 2, Avez-vous vu une corde à sauter ?, 1, a, a, 0.91, 102.36
+leila, 5, 2, Retry, 0, a, 0, 0.92, 103.3
+leila, 6, 2, Toutes les personnes sont-elles habillées en blanc ?, 1, p, p, 3.2, 110.42
+leila, 6, 2, Combien y a-t-il de personnes cette photo ?  20 / 40, 1, a, a, 3.14, 113.57
+leila, 6, 2, Retry, 0, a, 0, 0.93, 114.54
+leila, 7, 2, Combien y a-t-il de personnes diplomées photo ?  39 / 82, 0, p, a, 11.64, 132.66
+leila, 7, 2, Avez-vous vu une personne habillé d'une robe blanche ?, 1, p, p, 12.48, 145.15
+leila, 7, 3, Retry, 0, p, 0, 0.62, 145.79
+leila, 7, 3, Combien y a-t-il de personnes diplomées photo ?  39 / 82, 1, a, a, 0.64, 152.87
+leila, 7, 3, Avez-vous vu une personne habillé d'une robe blanche ?, 0, a, p, 0.46, 153.35
+leila, 7, 3, Retry, 0, a, 0, 0.69, 154.07
+leila, 8, 3, Combien y a-t-il de drapeaux cette photo ?  4 / 5, 1, a, a, 0.6, 158.32
+leila, 8, 3, Les drapeaux sont-ils tous plantés à la même profondeur ?, 0, a, p, 0.33, 158.67
+leila, 8, 3, Retry, 0, a, 0, 0.48, 159.18
+leila, 9, 3, Avez-vous vu un téléphone sur cette photo ? , 1, a, a, 0.47, 165.43
+leila, 9, 3, De quelle couleure est ce téléphone ?  noir / rose, 0, a, p, 0.32, 165.76
+leila, 9, 3, Le téléphone était-il décroché ?, 1, a, a, 5.19, 170.96
+leila, 9, 3, Retry, 0, a, 0, 0.66, 171.66
+leila, 10, 3, Combien y a-t-il de femmes en bas à gauche de l'image ?  2 / 4, 0, a, p, 0.71, 177.16
+leila, 10, 3, Avez-vous vu un point rouge sur cette photo ?, 1, a, a, 2.47, 179.64
+leila, 10, 3, Retry, 0, a, 0, 0.74, 180.41
+leila, 11, 3, Tout les personnages ont-ils un casque ?, 0, a, p, 0.96, 185.08
+leila, 11, 3, Combien y a-t-il de personnages sur cette photos ?  55 / 201, 1, a, a, 0.33, 185.43
+leila, 11, 3, Retry, 0, a, 0, 0.58, 186.03
+leila, 12, 3, Combien y a-t-il de personnages sur cette photos ?  1 / 2, 1, a, a, 0.54, 191.24
+leila, 12, 3, Avez-vous vu des taches de peinture sur du véhicule ? , 1, a, a, 0.34, 191.59
+leila, 12, 3, Avez-vous vu des pots de peinture sur le capot du véhicule ?, 1, a, a, 0.52, 192.13
+leila, 12, 3, Retry, 0, a, 0, 1.06, 193.21
+leila, 13, 3, Combien y a-t-il de personnages sur cette photo ?   2 / 4, 1, a, a, 0.53, 196.38
+leila, 13, 3, Retry, 0, a, 0, 0.51, 196.91
+leila, 14, 3, Combien y a-t-il de personnages sur cette photo ?  2 / 3, 0, a, p, 0.5, 205.89
+leila, 14, 3, La pièce est-elle rangée ? , 0, a, p, 5.17, 211.07
+leila, 14, 3, Combien y a-t-il de posters sur les murs ?  9 / 21, 1, a, a, 0.96, 212.05
+leila, 14, 3, Avez-vous remarqué des vêtements qui ne sont pas pliés ?, 1, a, a, 2.99, 215.05
+leila, 14, 3, Retry, 0, a, 0, 1.08, 216.15
+leila, 15, 3, Avez-vous vu des mouchoirs usagés ?, 1, a, a, 2.55, 227.52
+leila, 15, 3, Avez-vous vu une éponge ?, 1, a, a, 0.84, 228.37
+leila, 15, 3, Avez-vous vu des serviettes usagées ?, 1, a, a, 0.67, 229.05
+leila, 15, 3, Les rebords de la fenêtre sont-ils propres ?, 0, a, p, 0.94, 230.0
+leila, 15, 3, Retry, 0, a, 0, 1.33, 231.36
+leila, 16, 3, Avez-vous vu une pile de livre sur la droite de l'image ? , 1, a, a, 1.0, 241.13
+leila, 16, 3, Avez-vous vu un ceintre sur la gauche de l'image?  , 1, a, a, 0.53, 241.67
+leila, 16, 3, Retry, 0, a, 0, 0.4, 242.1
+leila, 17, 3, Combien y a-t-il de tasses sur cette photo ?  21 / 4, 0, a, p, 0.77, 251.59
+leila, 17, 3, Avez-vous vu du linge sale sur cette photo ? , 1, a, a, 0.5, 252.1
+leila, 17, 3, Avez-vous vu des restes alimentaires sur cette photo ?, 1, a, a, 0.57, 252.69
+leila, 17, 3, Retry, 0, a, 0, 1.03, 253.73
+leila, 18, 3, Combien avez-vous vu de penguins sur cette photo ?   24 / 12, 0, a, p, 0.65, 258.95
+leila, 18, 3, Retry, 0, a, 0, 0.64, 259.61
+leila, 19, 3, Combien avez-vous vu d'humains sur cette photo ?   2 / 4, 1, a, a, 0.57, 265.78
+leila, 19, 3, Combien avez vous vu de moutons sur cette photo ?  une cinquantaine / une dizaine, 1, a, a, 0.24, 266.04
+leila, 19, 3, Retry, 0, a, 0, 0.56, 266.63
+leila, 20, 3, Il y a plus de 7 tentacules visibles    Vrai / Faux, 1, a, a, 5.47, 277.34
+leila, 20, 3, il y a autant de tentacules de part et d autre du clocher   Vrai / Faux, 0, p, a, 7.18, 284.53
+leila, 20, 3, Retry, 0, a, 0, 3.71, 288.28
+leila, 21, 3, Il y a autant de grands arbres a gauche qu a droite   Vrai / Faux, 0, a, p, 3.04, 297.8
+leila, 21, 3, la caleche est tiree par deux chevaux   Vrai / Faux, 0, a, p, 0.89, 298.7
+leila, 21, 3, on peut apercevoir un clocher   Vrai / Faux , 0, a, p, 0.47, 299.18
+leila, 21, 3, Retry, 0, a, 0, 0.56, 299.76
+leila, 22, 3, Les toits sont bleus   Vrai / Faux, 1, a, a, 7.16, 311.23
+leila, 22, 3, Retry, 0, a, 0, 2.95, 314.21
+leila, 23, 3, Il y a 5 bateaux   Vrai / Faux, 1, a, a, 1.83, 323.49
+leila, 23, 3, Il y a  des bateaux a 2 voiles   Vrai / Faux , 1, a, a, 1.03, 324.54
+leila, 23, 3, Tous les protagonistes portent des couvres chefs   Vrai / Faux, 0, a, p, 1.41, 325.97
+leila, 23, 3, On peut voir un chien   Vrai / Faux, 0, a, p, 0.75, 326.73
+leila, 23, 3, Retry, 0, a, 0, 2.68, 329.43
+leila, 24, 3, Toutes les lunes sont dans le même sens   Vrai / Faux, 1, a, a, 2.43, 336.23
+leila, 24, 3, Retry, 0, a, 0, 0.84, 337.1
+leila, 25, 3, Les tapis sont   de biais / alignés, 1, a, a, 2.87, 348.44
+leila, 25, 3, Il y a une brosse a dent pres du lit   Vrai / Faux, 0, a, p, 6.66, 355.12
+leila, 25, 3, L armoire est  ouverte / fermee, 0, a, p, 6.73, 361.86
+leila, 25, 3, Retry, 0, a, 0, 1.43, 363.33
+leila, 26, 3, Il y a  plus de 10 pommes / moins de 10 pommes, 0, a, p, 77.41, 445.17
+leila, 26, 3, Retry, 0, a, 0, 0.9, 446.1
+leila, 27, 3, Les costumes sont ideniques   Vrai / Faux, 1, a, a, 3.76, 454.19
+leila, 27, 3, Retry, 0, a, 0, 1.64, 455.86
+leila, 28, 3, Les elephants sont symetriques   Vrai / Faux, 1, p, p, 6.09, 466.42
+leila, 28, 3, Retry, 0, a, 0, 2.3, 468.75
+leila, 29, 3, Les toits sont a la meme hauteur   Vrai / Faux, 0, a, p, 15.08, 488.27
+leila, 29, 3, Retry, 0, a, 0, 1.13, 489.43
+leila, 30, 3, Le deuxieme elephant porte    une pyramide / un cone , 1, a, a, 3.6, 497.46
+leila, 30, 3, Retry, 0, a, 0, 1.23, 498.72
+leila, 31, 3, Il y a plus de 30 papillons    Vrai / Faux , 0, a, p, 7.4, 512.67
+leila, 31, 3, Retry, 0, a, 0, 0.68, 513.37
