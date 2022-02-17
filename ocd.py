@@ -13,9 +13,6 @@ from PIL import Image
 
 screen = get_monitors()[0]
 
-# if that raises an error, put this first
-# from os import environ
-# environ['DISPLAY'] = ':0.0'
 
 width = screen.width
 height = screen.height
@@ -102,8 +99,8 @@ class Toc(TaskTemplate):
 
 
     def task(self, no_trial, exp_start_timestamp, trial_start_timestamp, practice=False,no_image=1, qretry=[1,2]):
-        yes_key_name = "a"
-        no_key_name  = "p"
+        yes_key_name = "p"
+        no_key_name  = "a"
 
         qretry = range(0,32)
         no_image = self.no_image
@@ -119,7 +116,7 @@ class Toc(TaskTemplate):
 
         dicoq = {
 
-        1 : [2,3,
+        1 : [0,3,
         ["Combien y a-t-il de personnes sur cette photo ? \n\n 9 / 15",
          yes_key_name],
 
@@ -128,7 +125,7 @@ class Toc(TaskTemplate):
 
         ],
 
-        2 : [2,3,
+        2 : [0,3,
         ["Combien y a-t-il de personnes sur cette photo ? \n\n 4 / 8",
         yes_key_name],
 
@@ -412,27 +409,21 @@ class Toc(TaskTemplate):
 
         elif dicoq[no_image][0] == 1 :
 
-            imgwidth, imgheight = size(f'{no_image}a')
+            for i in ['a','b','c','d','e'] :
+                imgwidth, imgheight = size(f'{no_image}{i}')
 
-            image_stim = visual.ImageStim(self.win, image=f'img/test{no_image}a.png',
-            units="pix",
+                image_stim = visual.ImageStim(self.win, image=f'img/test{no_image}{i}.png',
+                units="pix",
 
-            size=(imgwidth, imgheight),
-            mask=None)
-            image_stim.draw()
-            self.win.flip()
-            core.wait(dicoq[no_image][1][0])
+                size=(imgwidth, imgheight),
+                mask=None)
+                image_stim.draw()
+                self.win.flip()
+                core.wait(dicoq[no_image][1])
 
-            imgwidth1, imgheight1 = size(f'{no_image}b')
 
-            image_stim = visual.ImageStim(self.win, image=f'img/test{no_image}b.png',
-            units="pix",
 
-            size=(imgwidth1, imgheight1),
-            mask=None)
-            image_stim.draw()
-            self.win.flip()
-            core.wait(dicoq[no_image][1][0])
+
 
         elif dicoq[no_image][0] == 2 :
 
@@ -458,6 +449,40 @@ class Toc(TaskTemplate):
 
         else :
             print('test')
+
+
+        if dicoq[no_image][0] == 1 :
+            imgwidth, imgheight = size(f'{no_image}q')
+
+            text_stim= visual.TextStim(self.win, text='Avez-vous vu cette image dans la série précédente ?',
+            pos=(0, -0.80),
+            units='norm')
+            image_stim = visual.ImageStim(self.win, image=f'img/test{no_image}q.png',
+            units="pix",
+            size=(imgwidth*0.8, imgheight*0.8),
+            pos=(0, 30),
+            ori=0,
+            mask=None)
+            image_stim.draw()
+            text_stim.draw()
+            self.win.flip()
+            resp, rt = self.get_response_with_time()
+
+
+            if resp == dicoq[no_image][2]:
+
+                result = 1
+
+
+                self.update_csv(self.participant, no_image, self.no_trial, 'Avez-vous vu cette image dans la série précédente ?', result , resp,
+                dicoq[no_image][2], round(rt,  2), round(time.time() - exp_start_timestamp, 2))
+
+
+            else :
+                result = 0
+
+                self.update_csv(self.participant, no_image, self.no_trial, 'Avez-vous vu cette image dans la série précédente ?', result, resp,
+                dicoq[no_image][2], round(rt, 2), round(time.time() - exp_start_timestamp, 2))
 
 
         for i in range(2,len(dicoq[no_image])):
@@ -489,7 +514,7 @@ class Toc(TaskTemplate):
 
             self.create_visual_text("Voulez vous revoir l'image,"
             "et répondre à nouveau "
-            "aux questions ?\n\n  'a' pour passer à la question suivante  \n\n 'p' pour revoir").draw()
+            f"aux questions ?\n\n  {yes_key_name} pour passer à la question suivante  \n\n {no_key_name} pour revoir").draw()
             self.win.flip()
             resp, rt = self.get_response_with_time()
 
