@@ -51,9 +51,9 @@ def get_concat_v(im1, im2):
 
 class Toc(TaskTemplate):
     trials = 1000
-    yes_key_name = "a"
-    yes_key_code = "a"
-    no_key_name = "p"
+    yes_key_name = "p"
+    yes_key_code = "p"
+    no_key_name = "a"
     quit_code = "q"
     keys = [no_key_name, "space", yes_key_name, quit_code]
 
