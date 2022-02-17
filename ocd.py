@@ -1,3 +1,4 @@
+from operator import concat
 from task_template import TaskTemplate
 from psychopy import visual, gui, data, event, core
 import time
@@ -28,16 +29,27 @@ def size(no_image1):
     imgwidth, imgheight = image.size
 
     if imgwidth > width:
-        while imgwidth > width*0.9 :
+        while imgwidth > width :
             imgwidth = imgwidth*0.9
             imgheight = imgheight*0.9
     if imgheight > height:
-        while imgheight > height*0.9 :
+        while imgheight > height :
             imgwidth = imgwidth*0.9
             imgheight = imgheight*0.9
 
     return  imgwidth, imgheight
 
+def get_concat_h(im1, im2):
+    dst = Image.new('RGB', (im1.width + im2.width, im1.height))
+    dst.paste(im1, (0, 0))
+    dst.paste(im2, (im1.width, 0))
+    return dst
+
+def get_concat_v(im1, im2):
+    dst = Image.new('RGB', (im1.width, im1.height + im2.height))
+    dst.paste(im1, (0, 0))
+    dst.paste(im2, (0, im1.height))
+    return dst
 
 
 class Toc(TaskTemplate):
@@ -97,9 +109,17 @@ class Toc(TaskTemplate):
         no_image = self.no_image
 
         keyboard_pressed = True
+
+        #diocq est un variable qui contient un dictionnaire structuré comme suit :
+        # les clés correspondent au numéro des images
+        # les valeurs sont des listes qui contiennent 3 éléments ou plus :
+        # - integer : le type d'image (0 : image simple avec question(s), 1: 5 images d'affilés, 2: images pour les 7 différences)
+        # - integer ou float : le nombre de seconde où l'image apparait
+        # - Une ou plusieurs liste de string de 2 élements qui contiennent la question et la touche de la bonne réponse.
+
         dicoq = {
 
-        1 : [0,3,
+        1 : [2,3,
         ["Combien y a-t-il de personnes sur cette photo ? \n\n 9 / 15",
          yes_key_name],
 
@@ -108,7 +128,7 @@ class Toc(TaskTemplate):
 
         ],
 
-        2 : [0,2,
+        2 : [2,3,
         ["Combien y a-t-il de personnes sur cette photo ? \n\n 4 / 8",
         yes_key_name],
 
@@ -414,8 +434,30 @@ class Toc(TaskTemplate):
             self.win.flip()
             core.wait(dicoq[no_image][1][0])
 
+        elif dicoq[no_image][0] == 2 :
+
+            im1 = Image.open(f'img/test{no_image}a.png')
+            im2 = Image.open(f'img/test{no_image}b.png')
+
+            get_concat_h(im1,im2).save(f'img/test{no_image}c.png')
+
+            imgwidth, imgheight = size(f'{no_image}c')
+
+            image_stim = visual.ImageStim(self.win, image=f'img/test{no_image}c.png',
+            units="pix",
+
+            size=(imgwidth, imgheight),
+            #pos=(0, 0),
+            #ori=0,
+            mask=None)
+            image_stim.draw()
+            #text_stim.draw()
+            self.win.flip()
+            core.wait(dicoq[no_image][1])
+
+
         else :
-            print('five')
+            print('test')
 
 
         for i in range(2,len(dicoq[no_image])):
